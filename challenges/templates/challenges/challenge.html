@@ -1,0 +1,22 @@
+<!-- 42. base.html extend하기. -->
+{% extends "base.html" %}
+
+<!-- 각 달에 대한 link를 클릭했을 때 이동하는 페이지. -->
+<!-- page title은 base.html에 page_title로 되어있기 때문에 이름 따라감 -->
+{% block page_title %}  
+  {{ month_name|title }} challenge
+{% endblock %}
+
+<!-- link 클릭 시 나오는 page. -->
+<!-- base.html을 상속받았기 때문에 변수 이름 따라감. -->
+{% block content%}
+  <h1>challenge in {{ month_name|title }}</h1>
+  <!-- 41. template tag 조건문 사용하기 -->
+  {% if text is not None %} 
+  <!-- template 언어 -->
+    <h2>{{ text|title }}</h2>
+  
+  {% else %}
+    <p>there is no challenge for this month yet. <br> come back later.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+<!-- 42 base.html extend -->
+{% extends "base.html" %}
+
+<!-- base.html에서 page 제목에 대한 것을 page_title로 사용하고 있어서 -->
+<!-- block page_title함. -->
+    {% block page_title %}
+      All challenges
+    {% endblock %}
+
+<!-- page 내용에 해당하는 것은 base.html에서 content라는 이름으로 사용되어 -->
+<!-- block content로 함. -->
+    {% block content %}
+      <ul>
+        {% for month in months %}
+        <!-- 40. html 태그인 a 안에 {}로 url을 hardcoding할 수도 있지만 -->
+        <!-- 그렇게 되면 나중에 부득이하게 url 수정을 해야 할 경우에 모든 파일에서 똑같이 수정해야 하기 때문에 비효율적이다 -->
+        <!-- 따라서 url을 dynamic 하게 하기 위한 방법을 찾아야 한다. -->
+        <!-- html 파일에서는 python 코드인 reverse함수를 사용할 수 없는 대신 -->
+        <!-- url이라는 태그를 사용한다. -->
+        <!-- <li><a href="/challenges/{{ month }}">{{ month|title }}</a></li> 비효율적인 코드.-->
+        <li><a href="{% url "month-challenge" month  %}">{{ month|title }}</a></li>
+        <!--  -->
+        {% endfor %}
+      </ul>
+    {% endblock %}
