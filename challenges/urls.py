@@ -9,7 +9,9 @@ urlpatterns= [
     # path("february", views.february),
 
     #29 added new path
-    path("", views.index), #/challenges/
+    #44. header를 클릭하면 index 화면으로 나오게 하기 위해 
+    #url tag를 사용해야 한다. 따라서 밑에 있는 path 함수에 name을 추가했다.
+    path("", views.index, name="index"), #/challenges/
     #dynamic url pathing using placeholder
 
     #int 동일한 이름의 변수인 month를 사용하는데 str을 사용한 path함수가 먼저 오면 "1"같은 숫자를 str로 받아버리기 때문에

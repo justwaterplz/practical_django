@@ -10,6 +10,9 @@
 <!-- link 클릭 시 나오는 page. -->
 <!-- base.html을 상속받았기 때문에 변수 이름 따라감. -->
 {% block content%}
+<!-- #44. partial templates nippets -->
+  {% include "challenges/includes/header.html" %}
+
   <h1>challenge in {{ month_name|title }}</h1>
   <!-- 41. template tag 조건문 사용하기 -->
   {% if text is not None %} 

@@ -10,6 +10,9 @@
 <!-- page 내용에 해당하는 것은 base.html에서 content라는 이름으로 사용되어 -->
 <!-- block content로 함. -->
     {% block content %}
+    <!-- 44. header.html snippet 추가 -->
+    {% include "challenges/includes/header.html" %}
+
       <ul>
         {% for month in months %}
         <!-- 40. html 태그인 a 안에 {}로 url을 hardcoding할 수도 있지만 -->

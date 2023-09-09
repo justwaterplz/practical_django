@@ -1,0 +1,10 @@
+<!-- #44. partial template snippet-->
+<!-- 본 파일을 base.html에도 적용할 수 있지만 -->
+<!-- 모든 html파일이 동일한 header를 사용하지 않을 가능성이 있기 때문에  -->
+<!-- 몇 개의 html에만 적용하기 위한 snippet을 만든다. -->
+<header>
+    <nav>
+        <!-- urls.py에 index에 해당하는 path 함수에 name을 추가하고  -->
+      <a href="{% url "index" %}">All Challenges</a>
+    </nav>
+</header>

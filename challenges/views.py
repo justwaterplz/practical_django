@@ -84,12 +84,3 @@ def monthly_challenge(request, month):
     # try 실패시 responsenotfound
     except:
         return HttpResponseNotFound("<h1>error</h1>")
-    # if month == 'january':
-    #     challenge_month = "1st view"
-    # elif month == 'march':
-    #     challenge_month = "3rd view"
-    # elif month == 'february':
-    #     challenge_month = "2nd view"
-    # else:
-    #     # 1 ~ 12월이 아닌 다른 것이 url에 입력되면 에러표시. 여기서는 1 2 3월만 해놔서 나머지가 안됨.
-    #     return HttpResponseNotFound("this month is not supported")
