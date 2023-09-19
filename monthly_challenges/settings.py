@@ -126,3 +126,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# django 실행 시 참고해야 할 static file 위치 설정
+#전역 static 파일 위치 줘야됨
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]

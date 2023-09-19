@@ -1,5 +1,14 @@
 <!-- 42 base.html extend -->
 {% extends "base.html" %}
+    {% comment %} 47. static css 추가 {% endcomment %}
+    {% load static %}
+
+    {% block css_files %}
+      <link rel="stylesheet" href="{% static "challenges/index.css" %}">
+      {% comment %} 49. header css file {% endcomment %}
+      <link rel="stylesheet" href="{% static "challenges/includes/header.css" %}">
+
+    {% endblock %}
 
 <!-- base.html에서 page 제목에 대한 것을 page_title로 사용하고 있어서 -->
 <!-- block page_title함. -->

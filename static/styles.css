@@ -1,0 +1,12 @@
+/* 48. global css file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+html {
+    font-family: 'Roboto Mono', monospace;;
+}
+
+body{
+    margin: 0;
+
+    background-color: #1a1a1a;
+}
