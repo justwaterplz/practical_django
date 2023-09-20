@@ -1,3 +1,3 @@
 # practical_django
-udemy django course
+udemy django course ~ #50
 
