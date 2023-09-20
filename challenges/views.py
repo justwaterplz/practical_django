@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+#46. http404 import
+from django.http import Http404, HttpResponseNotFound, HttpResponseRedirect
 # reverse
 from django.urls import reverse
 
@@ -83,4 +84,6 @@ def monthly_challenge(request, month):
         })
     # try 실패시 responsenotfound
     except:
-        return HttpResponseNotFound("<h1>error</h1>")
+        # 46. 함수 argument로 하드코딩된 h1 tag 전송하는 대신 
+        # http404라는 함수를 import 하면 된다. 이때 함수로 넘길 값은 404.html
+        raise Http404()
